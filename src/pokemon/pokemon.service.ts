@@ -29,7 +29,7 @@ export class PokemonService {
   }
 
   async findAll() {
-    return `This action returns all pokemon`;
+    return this.pokemonModel.find();
   }
 
   async findOne(term: string): Promise<Pokemon> {
