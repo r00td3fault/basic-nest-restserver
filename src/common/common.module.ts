@@ -1,4 +1,11 @@
 import { Module } from '@nestjs/common';
-
-@Module({})
-export class CommonModule {}
+import { AxiosAdapter } from './adapters/axios.adapter';
+@Module({
+    providers: [
+        {
+            provide: AxiosAdapter,
+            useFactory: () => new AxiosAdapter('https://pokeapi.co/api/v2/'),
+        }],
+    exports: [AxiosAdapter],
+})
+export class CommonModule { }
