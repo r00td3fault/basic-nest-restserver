@@ -17,13 +17,19 @@ npm i -g @nestjs/cli
 ```
 docker-compose up -d 
 ```
+5. Clonar el archivo __.env.template__ y completar las variables de entorno en el archivo __.env__
 
-5. Insertar data inicial
+6. Iniciar la aplicación en modo desarrollo con el comando
+```
+yarn start:dev
+```
+7. Insertar data inicial
 ```
 http://localhost:3000/api/v2/seed
 ```
 
 
 ## Stack
-* MongoDB
+* TypeScript
 * Nest
+* MongoDB
