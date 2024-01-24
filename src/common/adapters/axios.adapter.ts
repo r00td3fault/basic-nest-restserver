@@ -9,6 +9,7 @@ export class AxiosAdapter implements HttpAdapater {
 
     private axiosInstance: AxiosInstance;
 
+    //TODO * Improve base url parametter ( no fixed in module)
     constructor(baseURL: string, defaultHeaders: Record<string, string> = {}) {
         this.axiosInstance = axios.create({
             baseURL,
